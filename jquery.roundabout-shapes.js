@@ -179,4 +179,12 @@ jQuery.extend(jQuery.roundaboutShapes,
 			scale: (Math.sin(r + Math.PI/2 + a) / 2) + 0.5
 		};
 	}
+	halfLazySusan: function(r, a, t) {
+		return {
+			x: (Math.sin(r)>0) ? Math.sin(r/2) : Math.sin(r/2 + Math.PI), 
+			y: (Math.sin(r + 3*Math.PI/2 + a) / 8) * t, 
+			z: (Math.cos(r + a) + 1) / 2,
+			scale: (Math.sin(r + Math.PI/2 + a) / 2) + 0.5
+		};
+	}	
 });
